@@ -1,0 +1,5 @@
+priority,incidents,breach rate,median hours
+1 Critical,270,0.981,80.242
+2 High,408,0.995,38.233
+3 Moderate,22010,0.37,21.55
+4 Low,674,0.182,5.017

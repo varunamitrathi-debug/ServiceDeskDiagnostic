@@ -1,0 +1,48 @@
+Event rows: 141,712   Incidents: 24,918
+Resolved incidents with a valid timeline: 23,362 (excluded 1,556 open or bad dates)
+Tickets opened between 29 Feb 2016 and 16 Feb 2017; 98.9% were opened March to May 2016
+
+HEADLINE KPIs
+Median hours to resolve: 22.1
+Mean hours to resolve: 178.2
+SLA breach rate: 38.2%  (8,930 breaches)
+Share reassigned 2+ times: 22.0%
+Share with a group ping pong loop: 11.3%
+Share reopened at least once: 1.2%
+
+BY PRIORITY
+            incidents  breachRate  medianHours
+priority                                      
+1 Critical        270       0.981       80.242
+2 High            408       0.995       38.233
+3 Moderate      22010       0.370       21.550
+4 Low             674       0.182        5.017
+
+BY REASSIGNMENT COUNT
+              incidents  breachRate  medianHours
+reassignBand                                    
+0                 12003       0.229        0.683
+1                  6228       0.429       42.050
+2                  2283       0.601      102.967
+3 to 4             1929       0.699      163.117
+5 plus              919       0.857      292.067
+
+TOP 5 CATEGORIES BY BREACH COUNT
+             incidents  breaches  breachRate  medianHours  shareOfAllBreaches  cumulativeShare
+category                                                                                      
+Category 46       2356      1236       0.525       65.708               0.138            0.138
+Category 53       2587       997       0.385       27.883               0.112            0.250
+Category 26       3045       993       0.326        5.583               0.111            0.361
+Category 42       3138       643       0.205        0.633               0.072            0.433
+Category 23       1055       501       0.475       46.300               0.056            0.490
+Top 5 categories hold 49.0% of all breaches from 52.1% of incidents
+
+Open backlog at 06 Mar: 956; at 29 May: 1,222
+Peak weekly open backlog: 1,756 incidents (week of 20 Mar 2016)
+
+IMPROVEMENT SIZING (estimates from this data)
+Incidents reassigned 2+ times: 5,131, breach rate 68.4% vs 29.7% for 0 or 1 reassignment
+If 25% of 2+ reassignment tickets were routed right first time: about 496 breaches avoided and 203,102 ticket hours of waiting removed (median gap 158 h per ticket)
+If 50% of 2+ reassignment tickets were routed right first time: about 992 breaches avoided and 406,204 ticket hours of waiting removed (median gap 158 h per ticket)
+Cutting the breach rate in the top 5 categories by a quarter would avoid about 1,092 breaches (12.2% of all)
+Reopened incidents: 274, breach rate 75.9%, median 237 h vs 21 h
