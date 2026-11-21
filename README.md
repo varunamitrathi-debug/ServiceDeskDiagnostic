@@ -12,6 +12,10 @@
 * **Output.** Five charts, CSV tables, and a Power BI report built in the Power BI service on the cleaned ticket table.
 * **Power BI report.** One page: four KPI cards (SLA breach rate 38.2%, median 22.1 hours to resolve, 22.0% of tickets reassigned twice or more, 23,362 resolved tickets), breach rate by number of reassignments, breach rate by priority, and tickets opened per day. The data comes straight from `powerbi/incidents for power bi.csv` in this repo, so the report refreshes from GitHub.
 
+![Power BI report](powerbi/report%20preview.png)
+
+The full export is in `powerbi/IT Service Desk Performance.pdf`.
+
 ## Key findings
 
 * **38.2% of resolved tickets breached SLA** (8,930 tickets). Median time to resolve is 22.1 hours, but the mean is 178.2 hours because a long tail of tickets stays open for weeks.
@@ -53,6 +57,8 @@ ServiceDeskDiagnostic/
   Build Guide.md                  step by step instructions, plus Power BI steps
   powerbi/incidents for power bi.csv   one row per resolved ticket with helper columns (reassign band, breach pct)
   powerbi/weekly backlog by priority.csv   weekly open backlog, March to May 2016
+  powerbi/IT Service Desk Performance.pdf  export of the Power BI report
+  powerbi/report preview.png       image of the Power BI report
   analysis.py                     all cleaning, metrics, sizing and charts
   output/
     summary.txt                   every number in this README
