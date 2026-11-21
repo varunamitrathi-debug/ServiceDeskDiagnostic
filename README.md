@@ -9,7 +9,8 @@
 * **Data.** 141,712 event log rows exported from a real ServiceNow instance, covering 24,918 incidents. 98.9% of tickets were opened between March and May 2016.
 * **Cleaning in Python (pandas).** Treated "?" as missing, parsed dates, ordered each ticket's events, and kept the final state of each ticket. Kept the 23,362 resolved tickets with a valid timeline and dropped 1,556 that were never resolved or had bad dates.
 * **Metrics.** Hours to resolve (opened to resolved), SLA breach rate (the final made SLA flag on each ticket), reassignments, ping pong loops (a ticket returning to a group that already had it), weekly open backlog by priority, and breaches by category.
-* **Output.** Five charts, CSV tables, and a clean incident table ready for Power BI.
+* **Output.** Five charts, CSV tables, and a Power BI report built in the Power BI service on the cleaned ticket table.
+* **Power BI report.** One page: four KPI cards (SLA breach rate 38.2%, median 22.1 hours to resolve, 22.0% of tickets reassigned twice or more, 23,362 resolved tickets), breach rate by number of reassignments, breach rate by priority, and tickets opened per day. The data comes straight from `powerbi/incidents for power bi.csv` in this repo, so the report refreshes from GitHub.
 
 ## Key findings
 
@@ -50,6 +51,8 @@ Caveats. Hours saved are elapsed hours a user waits, not agent working hours, wh
 ServiceDeskDiagnostic/
   README.md                       this summary
   Build Guide.md                  step by step instructions, plus Power BI steps
+  powerbi/incidents for power bi.csv   one row per resolved ticket with helper columns (reassign band, breach pct)
+  powerbi/weekly backlog by priority.csv   weekly open backlog, March to May 2016
   analysis.py                     all cleaning, metrics, sizing and charts
   output/
     summary.txt                   every number in this README
@@ -64,7 +67,7 @@ ServiceDeskDiagnostic/
 
 ## Tools
 
-Python (pandas, matplotlib), ServiceNow incident data model. The charts in `charts/` are the Python chart pack; the Build Guide has the steps and DAX measures to build the same view in Power BI from `incidents clean.csv`.
+Python (pandas, matplotlib), Power BI service (Power Query web connector, report editor), ServiceNow incident data model. The charts in `charts/` are the Python chart pack; the Build Guide has the steps and DAX measures to build the same view in Power BI from `incidents clean.csv`.
 
 ## How to run
 
